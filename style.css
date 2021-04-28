@@ -1,0 +1,66 @@
+@font-face {
+    src: url(fonts/GothamBold.ttf);
+    font-family: Gotham;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Gotham;
+    height: 100vh;
+    background: linear-gradient(#166088, #192231);
+    display: grid;
+    /* justify-content: center; */
+}
+
+.container-calc {
+    height: 736px;
+    width: 414px;
+    margin-top: 50px;
+    
+}
+
+.output {
+    width: 414px;
+    height: 216px;
+    background-color: #192231;
+    position: relative;
+}
+
+.small-output {
+    color: #FFFFFFBF;
+    position: absolute;
+    right: 1.5em;
+    top: 5em;
+    font-size: 22px;
+}
+
+.operators-output {
+    color: #FFFFFFBF;
+    position: absolute;
+    right: 1em;
+    top: 6.4em;
+    font-size: 18px;
+}
+.current-output {
+    color: #FFFFFF;
+    position: absolute;
+    right: .5em;
+    top: 5em;
+    font-size: 32px;
+}
+
+/* */
+
+.input {
+    width: 414px;
+    height: 520px;
+    background-color: #FFFFFFE6;
+    display: grid;
+    grid-column: 4;
+}
+
+.clear, .del {
+    font-size: 22px;
+}
