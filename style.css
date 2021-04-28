@@ -11,7 +11,7 @@ body, html {
     height: 100vh;
     background: linear-gradient(#166088, #192231);
     display: grid;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .container-calc {
@@ -57,10 +57,75 @@ body, html {
     width: 414px;
     height: 520px;
     background-color: #FFFFFFE6;
-    display: grid;
-    grid-column: 4;
+   position: relative;
 }
 
-.clear, .del {
+.del_image {
+    position: absolute;
+    right: 20px;
+    top: 33px;
+}
+.clear {
+    position: absolute;
+    left: 34px;
+    top: 41px;
+    font-family: Gotham;
     font-size: 22px;
+}
+.ce {
+    position: absolute;
+    left: 148px;
+    top: 41px;
+    font-family: Gotham;
+    font-size: 22px;
+}
+
+.clear:hover, .ce:hover {
+    cursor: pointer;
+    color: #394150;
+}
+.del_image:hover {
+    cursor: pointer;
+    top: 34px;
+}
+/* All buttons here */
+
+.all_buttons {
+    position: absolute;
+    top: 111px;
+    text-align: center;
+}
+button {
+    font-family: Arial;
+    font-size: 32px;
+    height: 87px;
+    width: 94px;
+    margin-right: -5px;
+    border: 1px solid #CAD2C5BF;
+    cursor: pointer;
+}
+.number {
+    background-color: #FFFFFFBF;
+    border: 1px solid #CAD2C5BF;
+}
+.number:hover {
+    background-color: #f0f0f0be;
+}
+
+.data_operators {
+    background-color: #FFFFFFE6;
+    border: 1px solid #37505BBF;
+}
+.data_operators:hover {
+    background-color: #f0f0f0be;
+}
+
+.equal-calc {
+    background-color: #192231;
+    color: #FFF;
+    border: 1px solid #CAD2C5BF;
+    border-right: #37505BBF;
+}
+.equal-calc:hover {
+    background-color: #272f3d;
 }
