@@ -25,4 +25,29 @@ allNumbers.forEach( number => {
     })
 })
 
+allOperators.forEach( operator => {
+    operator.addEventListener('click', e => {
+        dot = false;
+        if(displayOperator) {
+            
+        }
+        if(displayOutput1 && displayOutput2 && displayOperator) {
+            compute();
+        } else {
+            operation();
+        }
+        displayOperator = e.target.innerText
+        smallOperatorOutput.innerText = displayOperator;
+        displayOutput1 += displayOutput2;
+        smallOutput.innerText = displayOutput1
+        displayOutput2 = '';
+        bigOutput.innerText = '';
+    })
+})
+
 //Next: continue working with event listener and functions
+//Functions: code here
+
+function operation() {
+    
+}
