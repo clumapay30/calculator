@@ -13,9 +13,9 @@ let result = null;
 let displayOperator = '';
 let dot = false;
 
-allNumbers.forEach( number => {
+allNumbers.forEach(number => {
     number.addEventListener('click', e => {
-        if(e.target.innerText === '.' && !dot) {
+        if (e.target.innerText === '.' && !dot) {
             dot = true;
         } else if (e.target.innerText === '.' && dot) {
             return;
@@ -25,29 +25,47 @@ allNumbers.forEach( number => {
     })
 })
 
-allOperators.forEach( operator => {
+allOperators.forEach(operator => {
     operator.addEventListener('click', e => {
         dot = false;
-        if(displayOperator) {
-            
-        }
-        if(displayOutput1 && displayOutput2 && displayOperator) {
-            compute();
-        } else {
-            operation();
-        }
         displayOperator = e.target.innerText
-        smallOperatorOutput.innerText = displayOperator;
-        displayOutput1 += displayOutput2;
-        smallOutput.innerText = displayOutput1
-        displayOutput2 = '';
-        bigOutput.innerText = '';
+        if (displayOutput1 && displayOutput2 && displayOperator) {
+            compute();
+            operation();
+        } else {
+            
+            smallOperatorOutput.innerText = displayOperator;
+            displayOutput1 += displayOutput2;
+            smallOutput.innerText = displayOutput1
+            displayOutput2 = '';
+            bigOutput.innerText = '';
+        }
     })
 })
 
 //Next: continue working with event listener and functions
 //Functions: code here
 
+function compute() {
+    if(displayOperator === '*') {
+        const tempResult = parseFloat(displayOutput1) * parseFloat(displayOutput2);
+        result = tempResult
+    } else if(displayOperator === '/') {
+        const tempResult = parseFloat(displayOutput1) / parseFloat(displayOutput2);
+        result = tempResult
+    } else if(displayOperator === '+') {
+        const tempResult = parseFloat(displayOutput1) + parseFloat(displayOutput2);
+        result = tempResult
+    } else if(displayOperator === '-') {
+        const tempResult = parseFloat(displayOutput1) - parseFloat(displayOutput2);
+        result = tempResult
+    }
+}
+
 function operation() {
-    
+    displayOutput2 = '';
+    bigOutput.innerText = ''
+    smallOutput.innerText = result;
+    displayOutput1 = result;
+    smallOperatorOutput.innerText = displayOperator; 
 }
