@@ -12,7 +12,7 @@ https://clumapay30.github.io/calculator/
     4. Second stage to JavaScript
         : Functions & Buttons
     5. Final stage to JavaScript
-        : destructure the code
+        : debug the code
 
 ## Calculator Project's mockup image
 ![Calculator](https://user-images.githubusercontent.com/82793186/116466893-f7a75000-a866-11eb-8e49-0f931da4dd7e.png)
