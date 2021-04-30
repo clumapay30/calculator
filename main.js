@@ -55,11 +55,26 @@ equal.addEventListener('click', e => {
     }
 })
 
-// del.addEventListener('click', e => {
-//     const delText = displayOutput2.slice(0, displayOutput2.length - 1)
-//     bigOutput.innerText = delText;
-// })
+del.addEventListener('click', e => {
+    displayOutput2 = bigOutput.innerText.toString().slice(0, -1);
+    bigOutput.innerText = displayOutput2;
+})
 
+ce.addEventListener('click', e => {
+    bigOutput.innerText = '';
+    displayOutput2 = '';
+})
+
+clear.addEventListener('click', e => {
+    displayOutput1 = '';
+    displayOutput2 = '';
+    result = null;
+    displayOperator = '';
+    dot = false;
+    bigOutput.innerText = '';
+    smallOutput.innerText = ''
+    smallOperatorOutput.innerText = '';
+})
 //Next: continue working with event listener and functions
 //Functions: code here
 
