@@ -5,13 +5,16 @@ const allNumbers = document.querySelectorAll('.number')
 const allOperators = document.querySelectorAll('.data_operators');
 const equal = document.querySelector('.equal-calc');
 const clear = document.querySelector('.clear')
-const del = document.querySelector('.del');
+const ce = document.querySelector('.ce')
+const del = document.querySelector('.del_image');
 
 let displayOutput1 = '';
 let displayOutput2 = '';
 let result = null;
 let displayOperator = '';
 let dot = false;
+
+//Buttons: code here
 
 allNumbers.forEach(number => {
     number.addEventListener('click', e => {
@@ -30,10 +33,10 @@ allOperators.forEach(operator => {
         dot = false;
         displayOperator = e.target.innerText
         if (displayOutput1 && displayOutput2 && displayOperator) {
-            compute();
-            operation();
+            // compute()
+            // operation()
         } else {
-            
+
             smallOperatorOutput.innerText = displayOperator;
             displayOutput1 += displayOutput2;
             smallOutput.innerText = displayOutput1
@@ -43,20 +46,34 @@ allOperators.forEach(operator => {
     })
 })
 
+equal.addEventListener('click', e => {
+    if (!displayOutput1 && !displayOutput2 && !displayOperator) {
+        return;
+    } else {
+        compute()
+        operation()
+    }
+})
+
+// del.addEventListener('click', e => {
+//     const delText = displayOutput2.slice(0, displayOutput2.length - 1)
+//     bigOutput.innerText = delText;
+// })
+
 //Next: continue working with event listener and functions
 //Functions: code here
 
 function compute() {
-    if(displayOperator === '*') {
+    if (displayOperator === '*') {
         const tempResult = parseFloat(displayOutput1) * parseFloat(displayOutput2);
         result = tempResult
-    } else if(displayOperator === '/') {
+    } else if (displayOperator === '/') {
         const tempResult = parseFloat(displayOutput1) / parseFloat(displayOutput2);
         result = tempResult
-    } else if(displayOperator === '+') {
+    } else if (displayOperator === '+') {
         const tempResult = parseFloat(displayOutput1) + parseFloat(displayOutput2);
         result = tempResult
-    } else if(displayOperator === '-') {
+    } else if (displayOperator === '-') {
         const tempResult = parseFloat(displayOutput1) - parseFloat(displayOutput2);
         result = tempResult
     }
@@ -64,8 +81,10 @@ function compute() {
 
 function operation() {
     displayOutput2 = '';
-    bigOutput.innerText = ''
-    smallOutput.innerText = result;
+    smallOutput.innerText = ''
+    bigOutput.innerText = result;
     displayOutput1 = result;
-    smallOperatorOutput.innerText = displayOperator; 
+    displayOperator = '';
+    smallOperatorOutput.innerText = displayOperator;
 }
+
