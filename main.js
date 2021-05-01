@@ -32,11 +32,18 @@ allOperators.forEach(operator => {
     operator.addEventListener('click', e => {
         dot = false;
         displayOperator = e.target.innerText
-        if (displayOutput1 && displayOutput2 && displayOperator) {
+        if(displayOutput2 === '.') {
+            alert('Please give me a number to get a result');
+            displayOutput2 = '';
+            bigOutput.innerText = '';
+            return;
+        }
+        if(!displayOutput2) {
+            alert(`Please give me a number to get a result`)
+            return;
             // compute()
             // operation()
         } else {
-
             smallOperatorOutput.innerText = displayOperator;
             displayOutput1 += displayOutput2;
             smallOutput.innerText = displayOutput1
@@ -47,6 +54,10 @@ allOperators.forEach(operator => {
 })
 
 equal.addEventListener('click', e => {
+    if(!displayOutput2) {
+        alert(`Please give me a number to get a result`)
+        return bigOutput.innerText = '';
+    }
     if (!displayOutput1 && !displayOutput2 && !displayOperator) {
         return;
     } else {
