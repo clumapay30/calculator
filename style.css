@@ -9,7 +9,7 @@ body, html {
     box-sizing: border-box; 
     font-family: Gotham;
     height: 100vh;
-    background: linear-gradient(#166088, #192231);
+    background-color: #8e9aaf;
     display: grid;
     justify-content: center;
 }
@@ -18,7 +18,7 @@ body, html {
     height: 736px;
     width: 414px;
     margin-top: 50px;
-    
+    box-shadow: 2px 3px 6px #000;
 }
 
 .output {
