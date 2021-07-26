@@ -2,7 +2,7 @@
 
 #### One of my first project
 
-## Demo page -> https://clumapay30.github.io/calculator/
+#### Demo page -> https://clumapay30.github.io/calculator/
 
 ### Local Development
     1. Ready the index.html
