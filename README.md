@@ -15,7 +15,7 @@
         : debug the code 
         : deploy
 
-### UPDATES:
+#### UPDATES:
     This calculator project is not fully functional yet. There are some bugs that need to take care of, but I'm going to pause this project for now. For now, I will continue my study and back to this project in the future once I'm comfortable with my knowledge or I have few projects done.
 
 ## Calculator Project's mockup image
